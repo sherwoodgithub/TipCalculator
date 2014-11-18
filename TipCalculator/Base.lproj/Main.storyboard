@@ -36,6 +36,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="taxPercentageChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="N2z-En-Ibd"/>
+                                </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2a5-bz-2Xp">
                                 <rect key="frame" x="190" y="111" width="272" height="31"/>
@@ -45,6 +48,9 @@
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="P5o-Ok-hdo"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDM-CH-DPz">
                                 <rect key="frame" x="20" y="187" width="440" height="288"/>
@@ -80,12 +86,16 @@
                     <connections>
                         <outlet property="resultsTextView" destination="vDM-CH-DPz" id="v0d-34-6ZR"/>
                         <outlet property="taxPctLabel" destination="3zH-gy-Kio" id="QTG-8Y-dDC"/>
-                        <outlet property="taxPctSlider" destination="2a5-bz-2Xp" id="yLZ-Gd-q9e"/>
-                        <outlet property="totalTextField" destination="VPf-9n-WU1" id="DH7-8O-J2C"/>
+                        <outlet property="taxPctSlider" destination="2a5-bz-2Xp" id="d6p-sw-Qnu"/>
+                        <outlet property="totalTextField" destination="VPf-9n-WU1" id="NNj-Fx-9Ic"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="3Ci-eq-C1e"/>
+                <tapGestureRecognizer id="3Ci-eq-C1e">
+                    <connections>
+                        <action selector="viewTapped:" destination="vXZ-lx-hvc" id="Q9C-F1-d67"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1117" y="389"/>
         </scene>
