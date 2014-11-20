@@ -40,11 +40,11 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="2a5-bz-2Xp">
                                 <rect key="frame" x="190" y="111" width="272" height="31"/>
                                 <connections>
-                                    <action selector="taxPercentageChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="jtN-Od-AIO"/>
+                                    <action selector="taxPercentageChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="gLR-oA-iRD"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KG-rW-AbV">
-                                <rect key="frame" x="277" y="149" width="65" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KG-rW-AbV">
+                                <rect key="frame" x="208" y="149" width="65" height="30"/>
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -52,9 +52,12 @@
                                     <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="P5o-Ok-hdo"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDM-CH-DPz">
-                                <rect key="frame" x="20" y="187" width="440" height="288"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QI-SJ-0sm">
+                                <rect key="frame" x="20" y="187" width="440" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="KzI-Ki-TlK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -62,21 +65,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="2a5-bz-2Xp" firstAttribute="leading" secondItem="3zH-gy-Kio" secondAttribute="trailing" constant="8" symbolic="YES" id="EPi-DS-3w8"/>
-                            <constraint firstItem="2a5-bz-2Xp" firstAttribute="trailing" secondItem="VPf-9n-WU1" secondAttribute="trailing" id="GOL-Mo-Mxq"/>
-                            <constraint firstItem="2a5-bz-2Xp" firstAttribute="bottom" secondItem="3zH-gy-Kio" secondAttribute="bottom" id="Hld-5q-Iih"/>
-                            <constraint firstItem="VPf-9n-WU1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="KgV-Y6-BOu"/>
-                            <constraint firstItem="vDM-CH-DPz" firstAttribute="top" secondItem="1KG-rW-AbV" secondAttribute="bottom" constant="8" symbolic="YES" id="LS0-My-BO9"/>
-                            <constraint firstItem="2a5-bz-2Xp" firstAttribute="top" secondItem="VPf-9n-WU1" secondAttribute="bottom" constant="9" id="NwN-x4-Lc7"/>
-                            <constraint firstItem="3zH-gy-Kio" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="OWl-Gi-lZZ"/>
-                            <constraint firstItem="1KG-rW-AbV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="277" id="OtN-n1-XGs"/>
-                            <constraint firstItem="vDM-CH-DPz" firstAttribute="trailing" secondItem="2a5-bz-2Xp" secondAttribute="trailing" id="Qcm-1D-3OT"/>
-                            <constraint firstItem="3zH-gy-Kio" firstAttribute="leading" secondItem="vDM-CH-DPz" secondAttribute="leading" id="YyH-kq-C7z"/>
-                            <constraint firstItem="VPf-9n-WU1" firstAttribute="leading" secondItem="2Ic-Lk-nzf" secondAttribute="trailing" constant="8" symbolic="YES" id="bFv-NS-XUD"/>
-                            <constraint firstItem="VPf-9n-WU1" firstAttribute="leading" secondItem="2a5-bz-2Xp" secondAttribute="leading" id="g8d-6M-WCC"/>
-                            <constraint firstItem="2Ic-Lk-nzf" firstAttribute="bottom" secondItem="VPf-9n-WU1" secondAttribute="bottom" id="gQq-KX-yNQ"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vDM-CH-DPz" secondAttribute="bottom" constant="125" id="hqW-fO-Vyb"/>
-                            <constraint firstItem="1KG-rW-AbV" firstAttribute="top" secondItem="2a5-bz-2Xp" secondAttribute="bottom" constant="8" symbolic="YES" id="jcN-TF-UhK"/>
+                            <constraint firstItem="VPf-9n-WU1" firstAttribute="bottom" secondItem="2Ic-Lk-nzf" secondAttribute="bottom" id="0Qv-Gl-ou2"/>
+                            <constraint firstItem="0QI-SJ-0sm" firstAttribute="leading" secondItem="3zH-gy-Kio" secondAttribute="leading" id="323-4z-EbY"/>
+                            <constraint firstItem="3zH-gy-Kio" firstAttribute="bottom" secondItem="2a5-bz-2Xp" secondAttribute="bottom" id="91Y-Y0-ILW"/>
+                            <constraint firstItem="2a5-bz-2Xp" firstAttribute="top" secondItem="VPf-9n-WU1" secondAttribute="bottom" constant="9" id="Av6-2W-Z6w"/>
+                            <constraint firstItem="0QI-SJ-0sm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="FVx-9C-g4U"/>
+                            <constraint firstItem="VPf-9n-WU1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="192" id="NIG-dE-rfI"/>
+                            <constraint firstItem="VPf-9n-WU1" firstAttribute="leading" secondItem="2Ic-Lk-nzf" secondAttribute="trailing" constant="8" symbolic="YES" id="RNE-sq-zBF"/>
+                            <constraint firstItem="VPf-9n-WU1" firstAttribute="trailing" secondItem="2a5-bz-2Xp" secondAttribute="trailing" id="Vq2-gc-qqV"/>
+                            <constraint firstItem="VPf-9n-WU1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="e2g-Ol-6QJ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0QI-SJ-0sm" secondAttribute="bottom" constant="285" id="eSS-gb-MvF"/>
+                            <constraint firstItem="VPf-9n-WU1" firstAttribute="leading" secondItem="2a5-bz-2Xp" secondAttribute="leading" id="r9x-vj-1gf"/>
+                            <constraint firstItem="VPf-9n-WU1" firstAttribute="trailing" secondItem="0QI-SJ-0sm" secondAttribute="trailing" id="wLK-fc-yHY"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="3Ci-eq-C1e" appends="YES" id="X0m-Bn-r8q"/>
@@ -84,9 +84,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="YNl-ZT-eci"/>
                     <connections>
-                        <outlet property="resultsTextView" destination="vDM-CH-DPz" id="v0d-34-6ZR"/>
+                        <outlet property="resultsTextView" destination="0QI-SJ-0sm" id="YfI-Ck-s7U"/>
                         <outlet property="taxPctLabel" destination="3zH-gy-Kio" id="QTG-8Y-dDC"/>
-                        <outlet property="taxPctSlider" destination="2a5-bz-2Xp" id="d6p-sw-Qnu"/>
+                        <outlet property="taxPctSlider" destination="2a5-bz-2Xp" id="nME-Oq-AXe"/>
                         <outlet property="totalTextField" destination="VPf-9n-WU1" id="NNj-Fx-9Ic"/>
                     </connections>
                 </viewController>

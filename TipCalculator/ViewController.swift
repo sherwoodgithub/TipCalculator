@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     let tipCalc = TipCalculatorModel(total: 33.25, taxPct: 0.06)
     
     func refreshUI() {
-        totalTextField.text = String(format: "%0.2f", tipCalc.total)
+        totalTextField.text = String(format: "%.2f", tipCalc.total)
         taxPctSlider.value = Float(tipCalc.taxPct) * 100.0
         taxPctLabel.text = "Tax Percentage (\(Int(taxPctSlider.value))%)"
         resultsTextView.text = ""
