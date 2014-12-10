@@ -13,11 +13,13 @@ class ViewController: UIViewController {
     @IBAction func calculateTapped(sender : AnyObject) {
         tipCalc.total = Double((totalTextField.text as NSString).doubleValue)
         let possibleTips = tipCalc.returnPossibleTips()
+        
         var results = ""
         
         //WTF?
         for (tipPct, tipValue) in possibleTips {
             results += "\(tipPct)%: \(tipValue)\n"
+
         }
         resultsTextView.text = results
     }
